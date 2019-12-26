@@ -18,12 +18,15 @@ $("input[type='text']").on("keypress",function(event){
     }
 });
 //add input control
-$("pencil-icon").on("click",function(){
+$("#icon").on("click",function(){   
     $("input[type='text']").fadeToggle("400");
-    if (document.getElementsByClassName("pencil-icon")[0].classList[2] === "fa-pencil"){
-        document.getElementsByClassName("pencil-icon")[0].classList[2] = "fa-minus";
+    if (document.getElementsByClassName("pencil-icon")[0].classList[2] == "fa-pencil"){
+        console.log("working");
+        $(".pencil-icon").removeClass("fa-pencil");
+        $(".pencil-icon").addClass("fa-minus");
     }
     else{
-        document.getElementsByClassName("pencil-icon")[0].classList[2] = "fa-pencil";
+        $(".pencil-icon").addClass("fa-pencil");
+        $(".pencil-icon").removeClass("fa-minus");
     }
 });  
